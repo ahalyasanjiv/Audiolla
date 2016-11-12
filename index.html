@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			function play(x) {
+				var audio = document.getElementsByClassName("audio");
+
+				audio[x].play();
+			}
+		</script>
+
+		<input type="button" value="play" onclick="play(0)">
+		<audio class="audio" src="notes/C.wav"></audio>
+
+		<input type="button" value="play" onclick="play(1)">
+		<audio class="audio" src="notes/D.wav"></audio>
+
+		<input type="button" value="play" onclick="play(2)">
+		<audio class="audio" src="notes/E.wav"></audio>
+
+		<input type="button" value="play" onclick="play(3)">
+		<audio class="audio" src="notes/F.wav"></audio>
+
+		<input type="button" value="play" onclick="play(4)">
+		<audio class="audio" src="notes/G.wav"></audio>
+
+		<input type="button" value="play" onclick="play(5)">
+		<audio class="audio" src="notes/A.wav"></audio>
+
+		<input type="button" value="play" onclick="play(6)">
+		<audio class="audio" src="notes/B.wav"></audio>
+
+	</body>
+</html>
