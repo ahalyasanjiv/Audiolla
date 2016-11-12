@@ -1,38 +1,56 @@
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<title></title>
-	</head>
-
+		<title>Audio</title>
+ 	</head>
+	
+	<script src="index.js"></script>
+	
 	<body>
 
 		<script>
+		/*
+			function play() {
+				 var audio = document.getElementById("audio");
+				 var notes = ["C", "A", "B", "D", "F", "G", "E"];
+				 var j = Math.floor(Math.random() * notes.length-1);
+				 document.getElementById("audio").src = "notes/" + notes[j]+".wav";
+				 audio.play();
+			}
+		*/
 			function play(x) {
 				var audio = document.getElementsByClassName("audio");
-
 				audio[x].play();
 			}
 		</script>
 
+		<!--
+		<input type="button" value="PLAY"  onclick="play()">
+		<audio id="audio" src="" ></audio>
+		-->
+		
+		<br><br>
+		Buttons of notes in order
 		<input type="button" value="play" onclick="play(0)">
-		<audio class="audio" src="notes/C.wav"></audio>
-
-		<input type="button" value="play" onclick="play(1)">
-		<audio class="audio" src="notes/D.wav"></audio>
-
-		<input type="button" value="play" onclick="play(2)">
-		<audio class="audio" src="notes/E.wav"></audio>
-
-		<input type="button" value="play" onclick="play(3)">
-		<audio class="audio" src="notes/F.wav"></audio>
-
-		<input type="button" value="play" onclick="play(4)">
-		<audio class="audio" src="notes/G.wav"></audio>
-
-		<input type="button" value="play" onclick="play(5)">
 		<audio class="audio" src="notes/A.wav"></audio>
 
-		<input type="button" value="play" onclick="play(6)">
+		<input type="button" value="play" onclick="play(1)">
 		<audio class="audio" src="notes/B.wav"></audio>
 
-	</body>
-</html>
+		<input type="button" value="play" onclick="play(2)">
+		<audio class="audio" src="notes/C.wav"></audio>
+
+		<input type="button" value="play" onclick="play(3)">
+		<audio class="audio" src="notes/D.wav"></audio>
+
+		<input type="button" value="play" onclick="play(4)">
+		<audio class="audio" src="notes/E.wav"></audio>
+
+		<input type="button" value="play" onclick="play(5)">
+		<audio class="audio" src="notes/F.wav"></audio>
+
+		<input type="button" value="play" onclick="play(6)">
+		<audio class="audio" src="notes/G.wav"></audio>
+
+ 	</body>
+ </html>
