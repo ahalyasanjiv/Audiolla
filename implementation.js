@@ -5,3 +5,4 @@ function play() {
 	 document.getElementById("audio").src = "notes/" + notes[j]+".wav";
 	 audio.play();
 }
+
