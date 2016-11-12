@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+  <html>
+  <head>
+  <title>Audio</title>
+  </head>
+	<script src="index.js"></script>
+  <body>
+
+		<script>
+		function play() {
+			 var audio = document.getElementById("audio");
+			 var notes = ["C", "A", "B", "D", "F", "G", "E"];
+			 var j = Math.floor(Math.random() * notes.length-1);
+			 document.getElementById("audio").src = "notes/" + notes[j]+".wav";
+			 audio.play();
+		}
+		</script>
+
+<input type="button" value="PLAY"  onclick="play()">
+<audio id="audio" src="" ></audio>
+ </body>
+ </html>
