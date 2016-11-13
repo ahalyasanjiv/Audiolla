@@ -39,6 +39,7 @@
 }
 
 .drag{
+	z-index: 10;
 	width: 36px;
 	padding: 5px;
 	background-color: #ffd9b3;
@@ -110,11 +111,15 @@
 	color: white;
 	-webkit-transition:  1.0s;
     transition: 1.0s;
+    position: relative;
+    top: -75px;
 }
 
 #submission {
 	width: 20%;
-	margin: 0 auto;
+	margin: auto;
+	position: relative;
+	top: -75px;
 
 }
 
@@ -126,6 +131,7 @@
 	border-style: none;
 	-webkit-transition: background-color 1.0s, color 1.0s;
     transition: background-color 1.0s,  color 1.0s;
+    z-index: 1;
     
 
 }
