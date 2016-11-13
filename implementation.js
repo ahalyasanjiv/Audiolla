@@ -11,6 +11,6 @@ function playSound(x) {
 	audio[x].play();
 }
 $( function() {
-    $( ".drag" ).draggable({ cancel: false, snap: ".slot"});
+    $( ".drag" ).draggable({ cancel: false, snap: ".slot", snapMode: "inner"});
   } );
 
