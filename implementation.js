@@ -15,11 +15,14 @@ function playSound(x) {
 	audio[x].play();
 }
 
-var random; // store the random notes as a global array so we can access this later
+
+ // store the random notes as a global array so we can access this later
 function randomize() {
+	if (document.getElementById('random').value == 'Restart'){
+		window.location.reload();
+	}
 	random = []; // reset the array
 	var notes = ["C", "D", "E", "F", "G", "A", "B", "Csharp", "Dsharp", "Fsharp", "Gsharp", "Asharp", "C5"];
-
 	var buttonIndex = 0;
 	while (notes.length > 0) {
 		var i = Math.floor(Math.random() * notes.length); // notes[i] is the chosen note
@@ -31,6 +34,7 @@ function randomize() {
 		notes.splice(i,1); // delete the chosen note
 	}
 }
+
 
 function checkAnswers(){
 	var time = 0;
@@ -117,6 +121,11 @@ window.setInterval(function() {
 	arr[12] = collision($('#C5'), $('#slot-C5'));
 	
 }, 200);
+
+$("random").click(function(){
+	alert("hi");
+	//document.getElementById("1").style.backgroundColor="blue";
+});
 
 $( function() {
     $( ".drag" ).draggable({ cancel: false, snap: ".slot", snapMode: "inner"});
