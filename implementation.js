@@ -59,13 +59,13 @@ function collision($div1, $div2) {
       return true;
   }
 window.setInterval(function() {
-    // $('#result1').text(collision($('#C'), $('#slot-C')));
-		// $('#result2').text(collision($('#D'), $('#slot-D')));
-		// $('#result3').text(collision($('#E'), $('#slot-E')));
-		// $('#result4').text(collision($('#F'), $('#slot-F')));
-		// $('#result5').text(collision($('#G'), $('#slot-G')));
-		// $('#result6').text(collision($('#A'), $('#slot-A')));
-		// $('#result7').text(collision($('#B'), $('#slot-B')));
+    $('#result1').text(collision($('#C'), $('#slot-C')));
+		$('#result2').text(collision($('#D'), $('#slot-D')));
+		$('#result3').text(collision($('#E'), $('#slot-E')));
+		$('#result4').text(collision($('#F'), $('#slot-F')));
+		$('#result5').text(collision($('#G'), $('#slot-G')));
+		$('#result6').text(collision($('#A'), $('#slot-A')));
+		$('#result7').text(collision($('#B'), $('#slot-B')));
 
 		arr[0] = collision($('#C'), $('#slot-C'));
 		arr[1] = collision($('#D'), $('#slot-D'));
