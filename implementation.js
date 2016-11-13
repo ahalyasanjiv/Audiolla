@@ -2,9 +2,9 @@ var arr = [];
 arr.length = 7;
 function play() {
 	var audio = document.getElementById("audio");
-	var notes = ["A", "B", "C", "D", "E", "F", "G"];
+	var notes = ["C", "D", "E", "F", "G", "A", "B"];
 	var j = Math.floor(Math.random() * notes.length);
-	document.getElementById("audio").src = "notes/" + notes[j]+".wav";
+	document.getElementById("audio").src = "notes/" + notes[j]+".mp3";
 	audio.play();
 }
 
@@ -16,13 +16,14 @@ function playSound(x) {
 var random; // store the random notes as a global array so we can access this later
 function randomize() {
 	random = []; // reset the array
-	var notes = ["A", "B", "C", "D", "E", "F", "G"];
+	var notes = ["C", "D", "E", "F", "G", "A", "B"];
 
 	var buttonIndex = 0;
 	while (notes.length > 0) {
 		var i = Math.floor(Math.random() * notes.length); // notes[i] is the chosen note
 		random.push(notes[i]); // add the randomly chosen note into random
-		document.getElementsByClassName("audio")[buttonIndex].src = "notes/" + notes[i] + ".wav";
+		document.getElementsByClassName("audio")[buttonIndex].src = "notes/" + notes[i] + ".mp3";
+		//document.getElementsByClassName("audio")[buttonIndex].id = notes[i];
 		document.getElementById(buttonIndex+1+"").id = notes[i];
 		buttonIndex++;
 		notes.splice(i,1); // delete the chosen note
@@ -38,7 +39,6 @@ function checkAnswers(){
 		if (i == arr.length -1)
 			document.getElementById("answer").innerHTML ="Great Job!!";
 	}
-
 }
 
 function collision($div1, $div2) {
@@ -60,20 +60,20 @@ function collision($div1, $div2) {
   }
 window.setInterval(function() {
     $('#result1').text(collision($('#C'), $('#slot-C')));
-		$('#result2').text(collision($('#D'), $('#slot-D')));
-		$('#result3').text(collision($('#E'), $('#slot-E')));
-		$('#result4').text(collision($('#F'), $('#slot-F')));
-		$('#result5').text(collision($('#G'), $('#slot-G')));
-		$('#result6').text(collision($('#A'), $('#slot-A')));
-		$('#result7').text(collision($('#B'), $('#slot-B')));
+	$('#result2').text(collision($('#D'), $('#slot-D')));
+	$('#result3').text(collision($('#E'), $('#slot-E')));
+	$('#result4').text(collision($('#F'), $('#slot-F')));
+	$('#result5').text(collision($('#G'), $('#slot-G')));
+	$('#result6').text(collision($('#A'), $('#slot-A')));
+	$('#result7').text(collision($('#B'), $('#slot-B')));
 
-		arr[0] = collision($('#C'), $('#slot-C'));
-		arr[1] = collision($('#D'), $('#slot-D'));
-		arr[2] = collision($('#E'), $('#slot-E'));
-		arr[3] = collision($('#F'), $('#slot-F'));
-		arr[4] = collision($('#G'), $('#slot-G'));
-		arr[5] = collision($('#A'), $('#slot-A'));
-		arr[6] = collision($('#B'), $('#slot-B'));
+	arr[0] = collision($('#C'), $('#slot-C'));
+	arr[1] = collision($('#D'), $('#slot-D'));
+	arr[2] = collision($('#E'), $('#slot-E'));
+	arr[3] = collision($('#F'), $('#slot-F'));
+	arr[4] = collision($('#G'), $('#slot-G'));
+	arr[5] = collision($('#A'), $('#slot-A'));
+	arr[6] = collision($('#B'), $('#slot-B'));
 }, 200);
 
 $( function() {
