@@ -10,7 +10,8 @@
 
 #topContent {
 	position: relative;
-	bottom: 0px;-webkit-transition:  1.0s;
+	bottom: 0px;
+	-webkit-transition:  1.0s;
     transition: 1.0s;
 }
 
@@ -90,4 +91,12 @@
 	padding:0;
 	position: relative;
 	top: 90%;
+}
+
+#answer {
+	opacity: 0;
+	text-align: center;
+	color: white;
+	-webkit-transition:  1.0s;
+    transition: 1.0s;
 }

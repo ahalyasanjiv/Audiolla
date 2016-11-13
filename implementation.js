@@ -31,14 +31,41 @@ function randomize() {
 }
 
 function checkAnswers(){
+	var time = 0;
+
 	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] == false){
 			document.getElementById("answer").innerHTML ="Failed!";
+			resultView(false, "answer");
 			break;
 		}
 		if (i == arr.length -1)
 			document.getElementById("answer").innerHTML ="Great Job!!";
+			resultView(true, "answer")
 	}
+
+	var endd = setInterval(tick, 1000)
+	function resultView(result, answer) {
+		document.getElementById(answer).style.opacity = "1";
+		document.getElementById(answer).style.zIndex = "100";
+		if (result == false) {
+		document.getElementById(answer).style.backgroundColor = "red";
+		} else {
+		document.getElementById(answer).style.backgroundColor = "green";
+		}
+	}
+
+	function tick(){
+		if (time == 2) {
+		document.getElementById("answer").style.opacity = "0";
+		document.getElementById("answer").style.zIndex = "-100"
+		clearInterval(endd);
+
+		} else{
+			time++;
+		}
+	}
+
 }
 
 function collision($div1, $div2) {
