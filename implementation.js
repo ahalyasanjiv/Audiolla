@@ -26,3 +26,7 @@ function randomize() {
 		notes.splice(i,1); // delete the chosen note
 	}
 }
+
+$( function() {
+    $( ".drag" ).draggable({ cancel: false, snap: ".slot", snapMode: "inner"});
+  } );
