@@ -28,27 +28,27 @@
 				<p>Put the notes in order~ Randomize to pick up the challenge! </p>
 
 			<input id ="random" type="button" value="random" onclick="randomize()">
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(0)">
+			<input id = "1" class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 			<audio class="audio" src="notes/A.wav"></audio>
-			
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(1)">
+
+			<input id = "2" class="drag" type="button" value="&#9733;" onclick="playSound(1)">
 			<audio id="B" class="audio" src="notes/B.wav"></audio>
 
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(2)">
+			<input id = "3" class="drag" type="button" value="&#9733;" onclick="playSound(2)">
 			<audio id="C" class="audio" src="notes/C.wav"></audio>
 
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(3)">
+			<input id = "4" class="drag" type="button" value="&#9733;" onclick="playSound(3)">
 			<audio id="D" class="audio" src="notes/D.wav"></audio>
 
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(4)">
+			<input id = "5" class="drag" type="button" value="&#9733;" onclick="playSound(4)">
 			<audio id="E" class="audio" src="notes/E.wav"></audio>
 
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(5)">
+			<input id = "6" class="drag" type="button" value="&#9733;" onclick="playSound(5)">
 			<audio id="F" class="audio" src="notes/F.wav"></audio>
 
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(6)">
+			<input id = "7" class="drag" type="button" value="&#9733;" onclick="playSound(6)">
 			<audio id="G" class="audio" src="notes/G.wav"></audio>
-			
+
 
 			<div id = "answers">
 				<div class="white"><div class="slot" id="slot-C"></div></div>
@@ -60,6 +60,17 @@
 				<div class="white"><div class="slot" id="slot-B"></div></div>
 			</div>
 
+
+		<!-- <p>Colliding? <span id="result1">false</span>
+		<p>Colliding? <span id="result2">false</span>
+		<p>Colliding? <span id="result3">false</span>
+		<p>Colliding? <span id="result4">false</span>
+		<p>Colliding? <span id="result5">false</span>
+		<p>Colliding? <span id="result6">false</span>
+		<p>Colliding? <span id="result7">false</span> -->
+
+			<input type="button" value = "submit" onclick="checkAnswers()">
+			<p id = "answer">words</p>
 
 	</body>
 </html>

@@ -10,7 +10,7 @@ function play() {
 
 function playSound(x) {
 	var audio = document.getElementsByClassName("audio");
-	audio[0].play();
+	audio[x].play();
 }
 
 var random; // store the random notes as a global array so we can access this later
@@ -19,11 +19,11 @@ function randomize() {
 	var notes = ["A", "B", "C", "D", "E", "F", "G"];
 
 	var buttonIndex = 0;
-
 	while (notes.length > 0) {
 		var i = Math.floor(Math.random() * notes.length); // notes[i] is the chosen note
 		random.push(notes[i]); // add the randomly chosen note into random
 		document.getElementsByClassName("audio")[buttonIndex].src = "notes/" + notes[i] + ".wav";
+		document.getElementById(buttonIndex+1+"").id = notes[i];
 		buttonIndex++;
 		notes.splice(i,1); // delete the chosen note
 	}
@@ -59,21 +59,21 @@ function collision($div1, $div2) {
       return true;
   }
 window.setInterval(function() {
-    $('#result1').text(collision($('#3'), $('#slot-C')));
-		$('#result2').text(collision($('#4'), $('#slot-D')));
-		$('#result3').text(collision($('#5'), $('#slot-E')));
-		$('#result4').text(collision($('#6'), $('#slot-F')));
-		$('#result5').text(collision($('#7'), $('#slot-G')));
-		$('#result6').text(collision($('#1'), $('#slot-A')));
-		$('#result7').text(collision($('#2'), $('#slot-B')));
+    // $('#result1').text(collision($('#C'), $('#slot-C')));
+		// $('#result2').text(collision($('#D'), $('#slot-D')));
+		// $('#result3').text(collision($('#E'), $('#slot-E')));
+		// $('#result4').text(collision($('#F'), $('#slot-F')));
+		// $('#result5').text(collision($('#G'), $('#slot-G')));
+		// $('#result6').text(collision($('#A'), $('#slot-A')));
+		// $('#result7').text(collision($('#B'), $('#slot-B')));
 
-		arr[0] = collision($('#3'), $('#slot-C'));
-		arr[1] = collision($('#4'), $('#slot-D'));
-		arr[2] = collision($('#5'), $('#slot-E'));
-		arr[3] = collision($('#6'), $('#slot-F'));
-		arr[4] = collision($('#7'), $('#slot-G'));
-		arr[5] = collision($('#1'), $('#slot-A'));
-		arr[6] = collision($('#2'), $('#slot-B'));
+		arr[0] = collision($('#C'), $('#slot-C'));
+		arr[1] = collision($('#D'), $('#slot-D'));
+		arr[2] = collision($('#E'), $('#slot-E'));
+		arr[3] = collision($('#F'), $('#slot-F'));
+		arr[4] = collision($('#G'), $('#slot-G'));
+		arr[5] = collision($('#A'), $('#slot-A'));
+		arr[6] = collision($('#B'), $('#slot-B'));
 }, 200);
 
 $( function() {
