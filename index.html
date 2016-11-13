@@ -20,7 +20,7 @@
  	</head>
 
  	<script src="implementation.js"></script>
- 	<script> 
+ 	<script>
 
  	</script>
 	<body>
@@ -29,16 +29,14 @@
 		<div id = "topContent">
 				<h1>Notes in order from A to G</h1>
 				<p>Put the notes in order~ Randomize to pick up the challenge! </p>
-			<input id ="random" type="button" value="Start!" onclick= "randomize(); document.getElementById('field').style.opacity='1.0' ; 
+			<input id ="random" type="button" value="Start!" onclick= "randomize(); document.getElementById('field').style.opacity='1.0' ;
 
-				document.getElementById('random').value = 'Restart'; 
+				document.getElementById('random').value = 'Restart';
 
 				document.getElementById('topContent').style.bottom='20px'">
 		</div>
-		
-		<div id="field">
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 
+		<div id="field">
 			<input id = "1" class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 
 			<audio class="audio" src="notes/A.wav"></audio>
@@ -82,17 +80,18 @@
 					<div class="black"><div class="slot" id="slot-Gsharp"></div></div>
 					<div class="black"><div class="slot" id="slot-Asharp"></div></div>
 				</div>
+
 			</div>
 
 		</div>
 
-		<p>Colliding? <span id="result1">false</span>
-		<p>Colliding? <span id="result2">false</span>
-		<p>Colliding? <span id="result3">false</span>
-		<p>Colliding? <span id="result4">false</span>
-		<p>Colliding? <span id="result5">false</span>
-		<p>Colliding? <span id="result6">false</span>
-		<p>Colliding? <span id="result7">false</span>
+		<span id="result1">false</span>
+		<span id="result2">false</span>
+		<span id="result3">false</span>
+		<span id="result4">false</span>
+		<span id="result5">false</span>
+		<span id="result6">false</span>
+		<span id="result7">false</span>
 
 			<input type="button" value = "submit" onclick="checkAnswers()">
 			<p id = "answer">words</p>
