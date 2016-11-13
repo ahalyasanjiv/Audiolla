@@ -20,7 +20,7 @@
  	</head>
 
  	<script src="implementation.js"></script>
- 	<script> 
+ 	<script>
 
  	</script>
 	<body>
@@ -29,16 +29,14 @@
 		<div id = "topContent">
 				<h1>Notes in order from A to G</h1>
 				<p>Put the notes in order~ Randomize to pick up the challenge! </p>
-			<input id ="random" type="button" value="Start!" onclick= "randomize(); document.getElementById('field').style.opacity='1.0' ; 
+			<input id ="random" type="button" value="Start!" onclick= "randomize(); document.getElementById('field').style.opacity='1.0' ;
 
-				document.getElementById('random').value = 'Restart'; 
+				document.getElementById('random').value = 'Restart';
 
 				document.getElementById('topContent').style.bottom='20px'">
 		</div>
-		
-		<div id="field">
-			<input class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 
+		<div id="field">
 			<input id = "1" class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 
 			<audio class="audio" src="notes/A.wav"></audio>
@@ -63,13 +61,13 @@
 
 
 			<div id = "answers">
+				<div class="white"><div class="slot" id="slot-A"></div></div>
+				<div class="white"><div class="slot" id="slot-B"></div></div>
 				<div class="white"><div class="slot" id="slot-C"></div></div>
 				<div class="white"><div class="slot" id="slot-D"></div></div>
 				<div class="white"><div class="slot" id="slot-E"></div></div>
 				<div class="white"><div class="slot" id="slot-F"></div></div>
 				<div class="white"><div class="slot" id="slot-G"></div></div>
-				<div class="white"><div class="slot" id="slot-A"></div></div>
-				<div class="white"><div class="slot" id="slot-B"></div></div>
 			</div>
 
 		</div>

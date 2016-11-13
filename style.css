@@ -23,7 +23,7 @@
 	z-index: -1;
 	-webkit-transition:  1.0s;
     transition: 1.0s;
-	
+
 }
 
 .drag{
@@ -72,4 +72,3 @@
 	position: relative;
 	top: 170px;
 }
-
