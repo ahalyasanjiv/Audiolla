@@ -1,5 +1,5 @@
 var arr = [];
-arr.length = 12;
+arr.length = 13;
 
 /*
 function play() {
@@ -18,7 +18,7 @@ function playSound(x) {
 var random; // store the random notes as a global array so we can access this later
 function randomize() {
 	random = []; // reset the array
-	var notes = ["C", "D", "E", "F", "G", "A", "B", "Csharp", "Dsharp", "Fsharp", "Gsharp", "Asharp"];
+	var notes = ["C", "D", "E", "F", "G", "A", "B", "Csharp", "Dsharp", "Fsharp", "Gsharp", "Asharp", "C5"];
 
 	var buttonIndex = 0;
 	while (notes.length > 0) {
@@ -37,7 +37,7 @@ function checkAnswers(){
 
 	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] == false){
-			document.getElementById("answer").innerHTML ="Failed!";
+			document.getElementById("answer").innerHTML ="Try Again!";
 			resultView(false, "answer");
 			break;
 		}
@@ -60,7 +60,7 @@ function checkAnswers(){
 	function tick(){
 		if (time == 2) {
 		document.getElementById("answer").style.opacity = "0";
-		document.getElementById("answer").style.zIndex = "-100"
+		document.getElementById("answer").style.zIndex = "-100";
 		clearInterval(endd);
 
 		} else{
@@ -100,6 +100,7 @@ window.setInterval(function() {
 	$('#result10').text(collision($('#Fsharp'), $('#slot-Fsharp')));
 	$('#result11').text(collision($('#Gsharp'), $('#slot-Gsharp')));
 	$('#result12').text(collision($('#Asharp'), $('#slot-Asharp')));
+	$('#result13').text(collision($('#C5'), $('#slot-C5')));
 	
 	arr[0] = collision($('#C'), $('#slot-C'));
 	arr[1] = collision($('#D'), $('#slot-D'));
@@ -113,6 +114,7 @@ window.setInterval(function() {
 	arr[9] = collision($('#Fsharp'), $('#slot-Fsharp'));
 	arr[10] = collision($('#Gsharp'), $('#slot-Gsharp'));
 	arr[11] = collision($('#Asharp'), $('#slot-Asharp'));
+	arr[12] = collision($('#C5'), $('#slot-C5'));
 	
 }, 200);
 
