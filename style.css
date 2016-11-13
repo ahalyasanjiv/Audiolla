@@ -1,22 +1,60 @@
-.drag{
-	padding: 0;
+#content {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	font-family: Helvetica;
+	color: #634d36;
+
 }
+
+#random {
+
+}
+
+.drag{
+	width: 36px;
+	padding: 5px;
+	background-color: #ffd9b3;
+	color: white;
+	border-radius: 20%;
+	border-style: none;
+	-webkit-transition: background-color 1.0s, color 1.0s;
+    transition: background-color 1.0s,  color 1.0s;
+}
+
+.drag:hover {
+	background-color: white;
+	color: #634d36;
+
+}
+
 #answers{
+	margin: auto;
 	background-color: #e9e9e9;
-	height:40px;
-	width:600px;
+	height:201px;
+	width:364px;
 	position: relative;
 	z-index: -1;
+	border: 10px solid white;
 }
+
+.white{
+	border: 1px solid grey;
+	width: 40px;
+	height: 200px;
+	float:left;
+	padding: 0px 5px 0px 5px;
+}
+
 .slot{
 	height:17px;
 	width:36px;
 	background-color: grey;
-	margin:10px 20px;
-	position: relative;
-	float:left;
 	border-radius: 20%;
+	margin: auto;
 	z-index: 0;
 	padding:0;
+	position: relative;
+	top: 170px;
 }
 
