@@ -71,6 +71,9 @@
 			<input id = "12" class="drag" type="button" value="&#9733;" onclick="playSound(11)">
 			<audio class="audio" src="notes/Asharp.mp3"></audio>
 
+			<input id = "13" class="drag" type="button" value="&#9733;" onclick="playSound(12)">
+			<audio class="audio" src="notes/C5.mp3"></audio>
+
 
 			<div id = "answers">
 				<div id="natural">
@@ -81,6 +84,7 @@
 					<div class="white"><div class="slot" id="slot-G"></div></div>
 					<div class="white"><div class="slot" id="slot-A"></div></div>
 					<div class="white"><div class="slot" id="slot-B"></div></div>
+					<div class="white"><div class="slot" id="slot-C5"></div></div>
 				</div>
 				<div id="sharp1">
 					<div class="black"><div class="slot" id="slot-Csharp"></div></div>
@@ -94,9 +98,12 @@
 				</div>
 
 			</div>
-
+			<div id ="submission">
+				<input id="submitb" type="button"  value = "submit" onclick="checkAnswers()">
+				<p id = "answer">words</p>
+			</div>
 		</div>
-
+<!--
 		<span id="result1">false</span>
 		<span id="result2">false</span>
 		<span id="result3">false</span>
@@ -109,8 +116,8 @@
 		<span id="result10">false</span>
 		<span id="result11">false</span>
 		<span id="result12">false</span>
+		<span id="result13">false</span> -->
 		
-			<input type="button" value = "submit" onclick="checkAnswers()">
-			<p id = "answer">words</p>
+			
 	</body>
 </html>
