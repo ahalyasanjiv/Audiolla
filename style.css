@@ -61,15 +61,34 @@
 	padding: 0px 5px 0px 5px;
 }
 
+#sharp1 {
+	position: relative;
+	top:-201px;
+	left:26px;
+}
+
+#sharp2 {
+	position: relative;
+	top:-201px;
+	left:88px;
+}
+
+.black{
+	width: 30px;
+	height: 110px;
+	float:left;
+	background-color: gray;
+	margin: 0px 9px 0px 9px;
+}
 .slot{
 	height:17px;
-	width:36px;
-	background-color: grey;
+	width:80%;
+	background-color:  #ffa34d;
 	border-radius: 20%;
 	margin: auto;
 	z-index: 0;
 	padding:0;
 	position: relative;
-	top: 170px;
+	top: 90%;
 }
 
