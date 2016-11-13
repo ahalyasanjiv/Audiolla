@@ -10,3 +10,7 @@ function playSound(x) {
 	var audio = document.getElementsByClassName("audio");
 	audio[x].play();
 }
+$( function() {
+    $( ".drag" ).draggable({ cancel: false, snap: ".slot"});
+  } );
+

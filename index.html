@@ -1,7 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Audio</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  		<title>Audio</title>
+
+  		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 	 	<link rel="stylesheet" href="/resources/demos/style.css">
+		<link rel="stylesheet" href="style.css">
+		<!-- jQuery files -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.js"></script>
+ 	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
  	</head>
 
  	<script src="implementation.js"></script>
@@ -13,26 +28,37 @@
 
 		<br><br>
 		Buttons of notes in order
-		<input type="button" value="play" onclick="playSound(0)">
+		<input class="drag" type="button" value="play" onclick="playSound(0)">
 		<audio class="audio" src="notes/A.wav"></audio>
+		
+		<input class="drag" type="button" value="play" onclick="playSound(1)">
+		<audio id="B" class="audio" src="notes/B.wav"></audio>
 
-		<input type="button" value="play" onclick="playSound(1)">
-		<audio class="audio" src="notes/B.wav"></audio>
+		<input class="drag" type="button" value="play" onclick="playSound(2)">
+		<audio id="C" class="audio" src="notes/C.wav"></audio>
 
-		<input type="button" value="play" onclick="playSound(2)">
-		<audio class="audio" src="notes/C.wav"></audio>
+		<input class="drag" type="button" value="play" onclick="playSound(3)">
+		<audio id="D" class="audio" src="notes/D.wav"></audio>
 
-		<input type="button" value="play" onclick="playSound(3)">
-		<audio class="audio" src="notes/D.wav"></audio>
+		<input class="drag" type="button" value="play" onclick="playSound(4)">
+		<audio id="E" class="audio" src="notes/E.wav"></audio>
 
-		<input type="button" value="play" onclick="playSound(4)">
-		<audio class="audio" src="notes/E.wav"></audio>
+		<input class="drag" type="button" value="play" onclick="playSound(5)">
+		<audio id="F" class="audio" src="notes/F.wav"></audio>
 
-		<input type="button" value="play" onclick="playSound(5)">
-		<audio class="audio" src="notes/F.wav"></audio>
+		<input class="drag" type="button" value="play" onclick="playSound(6)">
+		<audio id="G" class="audio" src="notes/G.wav"></audio>
+		
+		<br><br><br>
 
-		<input type="button" value="play" onclick="playSound(6)">
-		<audio class="audio" src="notes/G.wav"></audio>
-
+		<div id = "answers">
+			<div class="slot" id="slot-C"></div>
+			<div class="slot" id="slot-D"></div>
+			<div class="slot" id="slot-E"></div>
+			<div class="slot" id="slot-F"></div>
+			<div class="slot" id="slot-G"></div>
+			<div class="slot" id="slot-A"></div>
+			<div class="slot" id="slot-B"></div>
+		</div>
 	</body>
 </html>
