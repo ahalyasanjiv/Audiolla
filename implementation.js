@@ -1,13 +1,15 @@
 var arr = [];
-arr.length = 7;
+arr.length = 12;
+
+/*
 function play() {
 	var audio = document.getElementById("audio");
-	var notes = ["C", "D", "E", "F", "G", "A", "B"];
+	var notes = ["C", "D", "E", "F", "G", "A", "B", "Csharp", "Dsharp", "Fsharp", "Gsharp", "Asharp"];
 	var j = Math.floor(Math.random() * notes.length);
 	document.getElementById("audio").src = "notes/" + notes[j]+".mp3";
 	audio.play();
 }
-
+*/
 function playSound(x) {
 	var audio = document.getElementsByClassName("audio");
 	audio[x].play();
@@ -16,14 +18,14 @@ function playSound(x) {
 var random; // store the random notes as a global array so we can access this later
 function randomize() {
 	random = []; // reset the array
-	var notes = ["C", "D", "E", "F", "G", "A", "B"];
+	var notes = ["C", "D", "E", "F", "G", "A", "B", "Csharp", "Dsharp", "Fsharp", "Gsharp", "Asharp"];
 
 	var buttonIndex = 0;
 	while (notes.length > 0) {
 		var i = Math.floor(Math.random() * notes.length); // notes[i] is the chosen note
 		random.push(notes[i]); // add the randomly chosen note into random
 		document.getElementsByClassName("audio")[buttonIndex].src = "notes/" + notes[i] + ".mp3";
-		//document.getElementsByClassName("audio")[buttonIndex].id = notes[i];
+		document.getElementsByClassName("audio")[buttonIndex].id = notes[i];
 		document.getElementById(buttonIndex+1+"").id = notes[i];
 		buttonIndex++;
 		notes.splice(i,1); // delete the chosen note
@@ -66,7 +68,12 @@ window.setInterval(function() {
 	$('#result5').text(collision($('#G'), $('#slot-G')));
 	$('#result6').text(collision($('#A'), $('#slot-A')));
 	$('#result7').text(collision($('#B'), $('#slot-B')));
-
+	$('#result8').text(collision($('#Csharp'), $('#slot-Csharp')));
+	$('#result9').text(collision($('#Dsharp'), $('#slot-Dsharp')));
+	$('#result10').text(collision($('#Fsharp'), $('#slot-Fsharp')));
+	$('#result11').text(collision($('#Gsharp'), $('#slot-Gsharp')));
+	$('#result12').text(collision($('#Asharp'), $('#slot-Asharp')));
+	
 	arr[0] = collision($('#C'), $('#slot-C'));
 	arr[1] = collision($('#D'), $('#slot-D'));
 	arr[2] = collision($('#E'), $('#slot-E'));
@@ -74,6 +81,12 @@ window.setInterval(function() {
 	arr[4] = collision($('#G'), $('#slot-G'));
 	arr[5] = collision($('#A'), $('#slot-A'));
 	arr[6] = collision($('#B'), $('#slot-B'));
+	arr[7] = collision($('#Csharp'), $('#slot-Csharp'));
+	arr[8] = collision($('#Dsharp'), $('#slot-Dsharp'));
+	arr[9] = collision($('#Fsharp'), $('#slot-Fsharp'));
+	arr[10] = collision($('#Gsharp'), $('#slot-Gsharp'));
+	arr[11] = collision($('#Asharp'), $('#slot-Asharp'));
+	
 }, 200);
 
 $( function() {
