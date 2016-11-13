@@ -4,11 +4,26 @@
 	text-align: center;
 	font-family: Helvetica;
 	color: #634d36;
+	margin-top: 200px;
 
+}
+
+#topContent {
+	position: relative;
+	bottom: 0px;-webkit-transition:  1.0s;
+    transition: 1.0s;
 }
 
 #random {
 
+}
+
+#field {
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition:  1.0s;
+    transition: 1.0s;
+	
 }
 
 .drag{

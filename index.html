@@ -20,14 +20,24 @@
  	</head>
 
  	<script src="implementation.js"></script>
+ 	<script> 
 
+ 	</script>
 	<body>
 
 		<div id = "content">
+		<div id = "topContent">
 				<h1>Notes in order from A to G</h1>
 				<p>Put the notes in order~ Randomize to pick up the challenge! </p>
 
-			<input id ="random" type="button" value="random" onclick="randomize()">
+			<input id ="random" type="button" value="Start!" onclick= "randomize(); document.getElementById('field').style.opacity='1.0' ; 
+
+				document.getElementById('random').value = 'Restart'; 
+
+				document.getElementById('topContent').style.bottom='20px'">
+		</div>
+		
+		<div id="field">
 			<input class="drag" type="button" value="&#9733;" onclick="playSound(0)">
 			<audio class="audio" src="notes/A.wav"></audio>
 			
@@ -59,7 +69,6 @@
 				<div class="white"><div class="slot" id="slot-A"></div></div>
 				<div class="white"><div class="slot" id="slot-B"></div></div>
 			</div>
-
-
+		</div>
 	</body>
 </html>
